@@ -4,29 +4,21 @@ e cadastre-os em uma lista, já na posição correta de inserção
 No final, mostre a lista ordenada na tela'''
 
 
-# valores = []
-# for n in range(0, 5):
-#     n = (int(input('Digite um valor: ')))
-#     if len(valores) == 0:
-#         valores.append(n)
-#     for valor in valores:
-#         if n > valor and n < valor+1:
-#             valores.insert(valor, n)
-# print(f'Os valores digitados em ordem foram {valores}')
-
-#passo 1: criar lista
 valores = []
-#passo 2: recebeer valores
-while len(valores) < 5:
+for cont in range(0, 5):
     n = int(input('Digite um valor: '))
-    if len(valores) == 0:
+    if cont == 0 or n > valores[len(valores)-1]:    #lista[-1] tambem funciona
         valores.append(n)
-#passo 3: comparar valor maior/menor
-    for v in valores:
-        if valores[v] < n < valores[v+1]:
-            valores.insert(v, n)
-        else:
-            valores.append(n)
-#passo 4: inserir valor na posicao correta
+        print('Adicionado ao final da lista')
+    else:
+        pos = 0
+        while pos < len(valores):                   #varre a lista da primeira pos ate a ultima
+            if n <= valores[pos]:                   #se o numero que quero inserir é menor que o numero em pos: insere
+                valores.insert(pos, n)              #na posição pos insere n
+                print(f'Adicionado na posição {pos} da lista')
+                break
+            pos += 1
+print('-'*60)
+print(f'Os valores digitados em ordem foram {valores}')
 
 
