@@ -1,5 +1,8 @@
 # Este é o README do curso de Python 3 do Curso em Vídeo com a lista de exercícios resolvidos
 
+<img align="center" alt="Python" height="150" width="450" 
+src="https://www.python.org/static/community_logos/python-logo-inkscape.svg">
+
 ## Mundo 1
 
 ### Primeiros passos com Python
